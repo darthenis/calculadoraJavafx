@@ -14,4 +14,9 @@ public class Controller {
     void addValue(ActionEvent event) {
         textField.setText(textField.getText() + ((Button)event.getSource()).getText());
     }
+
+    @FXML
+    void deleteAll(){
+        textField.setText("");
+    }
 }

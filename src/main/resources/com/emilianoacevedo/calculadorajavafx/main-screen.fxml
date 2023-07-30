@@ -33,7 +33,7 @@
             <Button fx:id="multiplicar" mnemonicParsing="false" prefHeight="42.0" prefWidth="66.0" text="*" GridPane.columnIndex="2" />
             <Button fx:id="dividir" mnemonicParsing="false" prefHeight="43.0" prefWidth="97.0" text="/" GridPane.columnIndex="3" />
             <Button fx:id="num7" mnemonicParsing="false" onAction="#addValue" prefHeight="38.0" prefWidth="96.0" text="7" GridPane.rowIndex="1" />
-            <Button fx:id="borrarTodo" mnemonicParsing="false" prefHeight="39.0" prefWidth="48.0" text="ce" />
+            <Button mnemonicParsing="false" onAction="#deleteAll" prefHeight="39.0" prefWidth="48.0" text="ce" />
             <Button fx:id="num9" mnemonicParsing="false" onAction="#addValue" prefHeight="61.0" prefWidth="135.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Button fx:id="restar" mnemonicParsing="false" prefHeight="69.0" prefWidth="132.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <Button fx:id="num4" mnemonicParsing="false" onAction="#addValue" prefHeight="41.0" prefWidth="66.0" text="4" GridPane.rowIndex="2" />
