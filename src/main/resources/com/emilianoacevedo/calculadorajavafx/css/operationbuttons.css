@@ -1,0 +1,21 @@
+.button{
+    -fx-background-color:
+        #707070,
+        linear-gradient(#fcfcfc, #f3f3f3),
+        linear-gradient(#9e9e9e 0%, #666464 50%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+.button:pressed {
+    -fx-background-color:
+        #707070,
+        linear-gradient(#fcfcfc, #f3f3f3),
+        linear-gradient(#666464 0%, #9e9e9e 50%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}

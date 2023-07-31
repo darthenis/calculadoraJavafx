@@ -1,0 +1,23 @@
+.result{
+    -fx-background-color:
+        #707070,
+        linear-gradient(#fcfcfc, #f3f3f3),
+        linear-gradient(#85fb89 0%, #709e71 50%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+
+.result:pressed {
+    -fx-background-color:
+        #707070,
+        linear-gradient(#fcfcfc, #f3f3f3),
+            linear-gradient(#709e71 0%, #85fb89 50%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
