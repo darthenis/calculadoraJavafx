@@ -18,13 +18,13 @@ public class Model extends VBox {
         if(this.value.equals("0")) {
             this.value = "";
         } if(!this.value.contains(".") || !value.equals(".")){
-
             if(this.value.equals("") && value.equals(".")){
                 this.value = "0.";
             } else {
                     this.value = this.value + value;
             }
         }
+
     }
 
     public void deleteAll(){
@@ -35,15 +35,24 @@ public class Model extends VBox {
         if(this.value.length() == 1){
             this.value = "0";
         } else {
+            //agregar borrado de operations
+            System.out.println(this.operation.toString());
+            String last = this.value.substring(this.value.length() - 2, this.value.length() - 1);
+            if(this.operation.get(this.operation.size() - 1).equals(last)){
+                this.operation.remove(this.operation.size() - 1);
+            }
             this.value = this.value.substring(0, this.value.length() - 1);
         }
 
     }
 
-    public void addSymbol(String symbol){
+    public void addSymbol(String symbol) {
         if(!this.value.equals("0")){
             if(this.operation.isEmpty()){
                 this.operation.add(this.value);
+            }else{
+                String value = String.join("", this.operation);
+                this.operation.add(this.value.substring(value.length()));
             }
             this.value = this.value + symbol;
             this.operation.add(symbol);
@@ -70,8 +79,11 @@ public class Model extends VBox {
                 case "/":
                     operation = "/";
                     break;
+                case "%":
+                    operation = "%";
+                    break;
                 default:
-                    switch(operation){
+                    switch(operation) {
                         case "+":
                             total = total + Double.parseDouble(element);
                             break;
@@ -83,6 +95,9 @@ public class Model extends VBox {
                             break;
                         case "/":
                             total = total / Double.parseDouble(element);
+                            break;
+                        case "%":
+                            total = (total / 100) * Double.parseDouble(element);
                             break;
                         case "":
                             total = Double.parseDouble(element);
